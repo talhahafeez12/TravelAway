@@ -32,8 +32,8 @@ function search() {
             clear();
             display.innerHTML += '<div id="displayedimgs"></div>';
             data.countries.forEach(country => {
-                country.cities.forEach(city => {
-                    if (city.includes(searched)) {
+                if (country.name.toLowerCase().includes(searched)) {
+                    country.cities.forEach(city => {
                         var new_image = `<div class="option"><img src="${city.imageUrl}" style="width:400px;height:auto;">
                         <span id="searchedInfo">
                             <h3>${city.name}</h3>
@@ -41,11 +41,9 @@ function search() {
                             <button>Visit</button>
                         </span></div>`
                         document.getElementById("displayedimgs").innerHTML += new_image;
-                    }  
-                });
+                    });
+                } 
             });
-
-        
         
         }
     });
