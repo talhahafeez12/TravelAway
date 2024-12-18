@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TravelAway</title>
+        <link rel="stylesheet" href="./travel_recommendation.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <nav><h1>TravelAway</h1>
+        <ul>
+            <li><a href="./travel_recommendation.html">Home</a></li>
+            <li><a href="./aboutus.html">About Us</a></li>
+            <li><a href="./contactus.html">Contact Us</a></li>
+        </ul>
+        </nav>
+        <div id="main_div">
+            <span id="logobar">
+                <a href="#" class="fa fa-facebook" style="color:white;text-decoration:none;"></a>
+                <a href="#" class="fa fa-twitter" style="color:white;text-decoration:none;"></a>
+                <a href="#" class="fa fa-instagram" style="color:white;text-decoration:none;"></a>
+                <a href="#" class="fa fa-youtube" style="color:white;text-decoration:none;"></a>
+            </span>
+            <div id="form_div">
+                <div id="main_text">
+                    <h1>CONTACT US</h1>
+                    <p>Get in touch.</p>
+                </div>
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" placeholder="Enter your email">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="20" cols="40" placeholder="Enter your message"></textarea>
+                    <button onclick="submitform()">Submit</button>
+                </form>
+            </div>
+            
+        </div>
+        <script src="./travel_recommendation.js"></script>
+    </body>
+</html>
