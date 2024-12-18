@@ -28,18 +28,20 @@ function search() {
                 </span></div>`
                 document.getElementById("displayedimgs").innerHTML += new_image;
             });
-        } else if ("countries".includes(searched) || searched == "country") {
+        } else {
             clear();
             display.innerHTML += '<div id="displayedimgs"></div>';
             data.countries.forEach(country => {
                 country.cities.forEach(city => {
-                    var new_image = `<div class="option"><img src="${city.imageUrl}" style="width:400px;height:auto;">
-                    <span id="searchedInfo">
-                        <h3>${city.name}</h3>
-                        <p>${city.description}</p>
-                        <button>Visit</button>
-                    </span></div>`
-                    document.getElementById("displayedimgs").innerHTML += new_image;
+                    if (city.includes(searched)) {
+                        var new_image = `<div class="option"><img src="${city.imageUrl}" style="width:400px;height:auto;">
+                        <span id="searchedInfo">
+                            <h3>${city.name}</h3>
+                            <p>${city.description}</p>
+                            <button>Visit</button>
+                        </span></div>`
+                        document.getElementById("displayedimgs").innerHTML += new_image;
+                    }  
                 });
             });
 
